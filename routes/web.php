@@ -14,13 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Route::get('/about', function () {
     return 9 * 9;
 });
 
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+
+// Route::view('/contact', 'contact', ['name' => 'Asep Saepudin', 'phone' => '085721485664']);
+
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['name' => 'Asep Saepudin', 'phone' => '085721485664']);
 });
